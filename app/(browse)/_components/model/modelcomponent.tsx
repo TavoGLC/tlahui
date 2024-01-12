@@ -1,4 +1,3 @@
-'use client'
 import { useState, useEffect } from "react"
 import { Card, AreaChart, Title } from "@tremor/react";
 
