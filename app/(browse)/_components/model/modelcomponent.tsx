@@ -1,4 +1,4 @@
-
+'use client'
 import { useState, useEffect } from "react"
 import { Card, AreaChart, Title } from "@tremor/react";
 
@@ -32,12 +32,6 @@ export const ModelComponent = () =>{
         'susceptibility':1
     }
 
-    const solarInitial = {
-        'dayofyear':1,
-        'sunspots':1
-
-    }
-
     const [solarData, setSolarData] = useState<any[]>(dataorg)
     const [compositionForecasted, setCompositionForecasted] = useState<any[]>([compositionInitial])
     const [susceptibilityForecasted, setSusceptibilityForecasted] = useState<any[]>([susceptibilityInitial])
@@ -69,7 +63,7 @@ export const ModelComponent = () =>{
             
         }
         MakePredictions()
-    },[inputForm])
+    },[inputForm,dataorg])
 
     return (
         <div>
