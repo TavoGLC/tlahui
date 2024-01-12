@@ -2,7 +2,9 @@ import * as tf from '@tensorflow/tfjs';
 
 const arrayColumn = (arr:any, n:number) => arr.map((x:any) => x[n]);
 
-const compositionModelURL = 'http://localhost:3000/composition/model.json';
+//const compositionModelURL = 'http://localhost:3000/composition/model.json';
+const compositionModelURL = 'https://tlahui.vercel.app/composition/model.json';
+
 
 async function CompositionModel(data:any[]): Promise<any[]> {
     const compositionModel = await tf.loadLayersModel(compositionModelURL);

@@ -2,7 +2,8 @@ import * as tf from '@tensorflow/tfjs';
 
 const arrayColumn = (arr:any, n:number) => arr.map((x:any) => x[n]);
 
-const ModelURL = 'http://localhost:3000/cases/model.json';
+//const ModelURL = 'http://localhost:3000/cases/model.json';
+const ModelURL = 'https://tlahui.vercel.app/cases/model.json';
 
 async function SusceptibilityModel(data:any[]): Promise<any[]> {
     const compositionModel = await tf.loadLayersModel(ModelURL);
