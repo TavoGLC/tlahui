@@ -8,7 +8,7 @@ async function CompositionModel(data:any[]): Promise<any[]> {
     const compositionModel = await tf.loadLayersModel(compositionModelURL);
     const localdata = tf.tensor2d(data).transpose()
 
-    const predictions = compositionModel.predict(localdata)
+    const predictions = (compositionModel.predict(localdata) as tf.Tensor)
     const value = predictions.arraySync()
     const A_m = arrayColumn(value,0)
     const C_m = arrayColumn(value,1)

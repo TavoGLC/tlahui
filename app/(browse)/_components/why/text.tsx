@@ -85,7 +85,7 @@ export const TextComponent = () => {
             
             <p className="text-xl">
                 Although there are other patterns with 
-                different durations derived from solar activity, there are two that we experience daily and are derived from the earth's planetary movement. 
+                different durations derived from solar activity, there are two that we experience daily and are derived from the earth&apos;s planetary movement. 
                 The first one is the result of the revolution movement and changes day duration (yearly pattern). 
             </p>
 
@@ -151,7 +151,7 @@ export const TextComponent = () => {
             <p className="text-xl">
                 Also, periods of time at which near-zero gradient conditions converge are not that common. However, pandemics that took place under a Gleissberg 
                 (a cycle of solar activity with a duration of around 100 years) and Schwabe near-zero gradient had a particularly high death toll (Spanish flu).  
-                Also as we are under a Gleissberg-Schwabe near zero gradient it's likely that the emergence of COVID-19 as well as the widespread excess mortality 
+                Also as we are under a Gleissberg-Schwabe near zero gradient it&apos;s likely that the emergence of COVID-19 as well as the widespread excess mortality 
                 is either a consequence or fuled by the current environment. 
             </p>
 
@@ -165,7 +165,7 @@ export const TextComponent = () => {
             <p className="text-xl">
                 If outbreaks, pandemics, and overall mortality are tightly correlated to near-zero gradient conditions such observation had likely been presented 
                 before. In the Mexica religion, the different gods were just representations of natural phenomena. Particularly, Tlahuizcalpantecuhtli, or the 
-                "early morning star" or the "lord of the dawn", represented Venus and its menacing aspects. It was believed that its rays could damage people, crops, 
+                &quot;early morning star&quot; or the &quot;lord of the dawn&quot;, represented Venus and its menacing aspects. It was believed that its rays could damage people, crops, 
                 and water sources. Early morning or dawn is also another of the many periods at which a zero gradient event takes place. 
             </p>
             <p className="text-xl">

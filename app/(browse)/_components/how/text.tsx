@@ -86,7 +86,7 @@ export const TextComponent = () => {
             </Link>
 
             <p className="text-xl">
-                Solar patterns that resulted from the earth's planetary movement were obtained from the following sources. 
+                Solar patterns that resulted from the earth&apos;s planetary movement were obtained from the following sources. 
             </p>
 
             <p className="text-xl font-bold">
@@ -132,7 +132,7 @@ export const TextComponent = () => {
             </p>
 
             <p className = "text-2xl font-bold">
-                What's next?
+                What&apos;s next?
             </p>
 
             <p className="text-xl">

@@ -9,7 +9,7 @@ async function SusceptibilityModel(data:any[]): Promise<any[]> {
     const localdata = tf.tensor2d(data).transpose()
     //const localdata = tf.randomUniform([365, 10])
 
-    const predictions = compositionModel.predict(localdata)
+    const predictions = (compositionModel.predict(localdata) as tf.Tensor)
     const value = predictions.arraySync()
     const susceptibility = arrayColumn(value,0)
 

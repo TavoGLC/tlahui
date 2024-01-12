@@ -12,35 +12,58 @@ import { FormatSusceptibilityFeatures } from "./formatSusceptibilityFeatures";
 export const ModelComponent = () =>{
     
     const dataorg = require('./utils/spotsscaled.json')
-    
+
     const [inputForm,setSliderValues] = useState({
         latitude:10,
         longitude:10,
         sunspots:25,
     })
 
-    const [compositionForecasted, setCompositionForecasted] = useState([])
-    const [susceptibilityForecasted, setSusceptibilityForecasted] = useState([])
+    const compositionInitial = {
+        'dayofyear':1,
+        'A':1,
+        'C':1,
+        'T':1,
+        'G':1
+    }
+
+    const susceptibilityInitial = {
+        'dayofyear':1,
+        'susceptibility':1
+    }
+
+    const solarInitial = {
+        'dayofyear':1,
+        'sunspots':1
+
+    }
+
+    const [solarData, setSolarData] = useState<any[]>(dataorg)
+    const [compositionForecasted, setCompositionForecasted] = useState<any[]>([compositionInitial])
+    const [susceptibilityForecasted, setSusceptibilityForecasted] = useState<any[]>([susceptibilityInitial])
 
     const handleChange = (e:any) => setSliderValues({
         ...inputForm,
         [e.target.name]:e.target.value
     })
 
-    const datasolar: any = []
-    for (let i=0; i< dataorg.length-1; i++) {
-        datasolar.push({
-            'dayofyear': dataorg[i]['dayofyear'],
-            'sunspots': dataorg[i]['sunspots']*inputForm.sunspots
-        })}
-
     useEffect(()=>{
 
         const MakePredictions = async () => {
+
+            const datasolar: any = []
+            for (let i=0; i< dataorg.length-1; i++) {
+                datasolar.push({
+                    'dayofyear': dataorg[i]['dayofyear'],
+                    'sunspots': dataorg[i]['sunspots']*inputForm.sunspots
+                })}
+
             const compositionFeats = FormatCopositionFeatures(inputForm.latitude,inputForm.longitude,datasolar)
             const compositionForecasted = await CompositionModel(compositionFeats)
             const susceptibilityFeats = FormatSusceptibilityFeatures(inputForm.latitude,inputForm.longitude,datasolar,compositionForecasted)
             const susceptibilityForecasted = await SusceptibilityModel(susceptibilityFeats)
+
+            setSolarData(datasolar)
             setCompositionForecasted(compositionForecasted)
             setSusceptibilityForecasted(susceptibilityForecasted)
             
@@ -109,7 +132,7 @@ export const ModelComponent = () =>{
                         <Title>Daily Aunspots Average (Max Scale = {inputForm.sunspots})</Title>
                             <AreaChart
                             className="mt-6"
-                            data={datasolar}
+                            data={solarData}
                             index="dayofyear"
                             categories={["sunspots"]}
                             colors={["indigo"]}
