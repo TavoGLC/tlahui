@@ -159,6 +159,21 @@ export const TextComponent = () => {
                     </Button>
             </Link>
 
+            <p className = "text-2xl font-bold">
+                Suggestions
+            </p>
+
+            <p className="text-xl">
+                If you know about some other sources of data or want to provide some feedback regarding any of the contents inside the app. Please leave them 
+                in the following poll. 
+            </p>
+
+            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe04CB7WuBWVRzZonBlR54-ofxd9MLaA56xHnpDqyjzC9VK0Q/viewform?usp=sf_link"  target="_blank" rel="noopener noreferrer">
+                    <Button >
+                        < ExternalLink />
+                    </Button>
+            </Link>
+
         </div>
     );
 };
