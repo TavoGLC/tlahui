@@ -11,6 +11,9 @@ import { DayDurationDeceases } from "./dldeceases";
 import { SolarFluxDeceases } from "./sfdeceases";
 import { MFDeceases } from "./mfdeceases";
 import { PSDeceases } from "./psdeceases";
+import { CasesDL } from "./casescurvedd";
+import { CasesDLG } from "./casescurveddg";
+import { CasesDLGF } from "./casesswept";
 
 
 export const TextComponent = () => {
@@ -84,15 +87,14 @@ export const TextComponent = () => {
 
             
             <p className="text-xl">
-                Although there are other patterns with 
-                different durations derived from solar activity, there are two that we experience daily and are derived from the earth&apos;s planetary movement. 
-                The first one is the result of the revolution movement and changes day duration (yearly pattern). 
+                Although there are at least other two patterns of solar activity, we experience them daily and are derived from the 
+                earth&apos;s planetary movement. The first one is the result of the revolution movement and changes day duration (yearly pattern).
             </p>
 
             <SolarYearly>
             </SolarYearly>
 
-            <p className="tedt-xl">
+            <p className="text-xl">
                 The second one results from the rotation movement and creates the day and night cycle often referred to as the circadian cycle (daily pattern). 
             </p>
 
@@ -157,6 +159,94 @@ export const TextComponent = () => {
 
             <SolarSG>
             </SolarSG>
+
+            <p className = "text-2xl font-bold">
+                What about COVID-19?
+            </p>
+
+            <p className="text-xl">
+                The previous shows how overall mortality as well as the emergence of pandemics are tightly associated with specific conditions of solar activity. 
+                Thus it is likely that some pathogens follow solar activity, however, due to the changing nature of solar activity such a correlation has not been 
+                made. Furthermore, solar activity is the basis of different time measures such as calendars. Also, it has been used to organize different aspects of 
+                human activity and society, making it likely to associate the prevalence of pathogens with solar rhythmicity to human activity and behavior. 
+                One such disease is COVID-19, a disease caused by SARS-Cov2 infection. Thus to accurately determine the seasonality of COVID-19 two things are 
+                needed, a general coordinate system and to remove some confounding factors. 
+            </p>
+
+            <p className = "text-2xl font-bold">
+                The general coordinate system. 
+            </p>
+
+            <p className="text-xl">
+                Let&apos;s consider the initial models of the solar system. In those models the earth was placed as the center of the solar system, an assumption heavily 
+                influenced by the observer. Using the Earth as a reference point made it difficult to describe planetary movement. However, when the sun was placed at 
+                the center, the planetary movement was easily described by a set of equations. Changing the reference point resulted in the discovery of a general 
+                coordinate system. 
+            </p>
+
+            <p className="text-xl">
+                Currently, there are a series of methods to discover coordinate systems, one of those techniques relies on the use of machine learning models. 
+                Particularly by training a specific architecture of neural network known as VAE or variational autoencoder. Training a VAE network with SARS-Cov2 
+                genomic data sorts the genome by similarity following the solar gradient over a yearly scale. Such correlation is in the range of 65% to 85% 
+            </p>
+
+            <p className = "text-2xl font-bold">
+                The confounding factors. 
+            </p>
+
+            <p className="text-xl">
+                As described before, near zero gradient conditions change time and location-wise. Those changes are influenced by the geometry of the planet as well 
+                as phenomena that change atmospheric composition. Pollution, cloudiness, and the time of day are some of the environmental factors that influence COVID-19 
+                prevalence that have been reported in the scientific literature. Yet its correlation is heavily underestimated due to how the data is processed. 
+                If data is averaged through large extensions of land the effect vanishes due to changes in gradient value. Making the best approach to analyze data at 
+                the city or municipality level. 
+            </p>
+
+            <p className = "text-2xl font-bold">
+                Putting everything together. 
+            </p>
+
+
+            <p className="text-xl">
+                First, case data from a particular city are selected and plotted against the day duration. This results in a graph where cases are clustered at 
+                the extremes. 
+            </p>
+
+            <CasesDL>
+            </CasesDL>
+
+            <p className="text-xl">
+                But, when the data is plotted against the day duration gradient both peaks change position inside the graph. Showing that there must be a fractional 
+                gradient value that aligns both peaks. 
+            </p>
+
+            <CasesDLG>
+            </CasesDLG>
+
+            <p className="text-xl">
+                A swept-through different fractional order gradient value aligns both peaks into a single one. Allowing to identify periods of high and low 
+                prevalence. Analyzing the data by city removes the influence of averaging different locations with contradictory gradient values, while the 
+                fractional gradient calculation removes the distortion generated by the shape of the planet. 
+            </p>
+
+            <CasesDLGF>
+            </CasesDLGF>
+
+            <p className="text-xl">
+                Summarizing, genomic data encodes seasonality through changes in composition often referred to as mutations. Such seasonality or general 
+                coordinate system can be retrieved using machine learning techniques. Plotting cases vs the discovered seasonality allows to cluster disease 
+                prevalence into a single unified period. 
+            </p>
+
+            <p className="text-xl">
+                Classifying pathogens due to their correlation to environmental variables is something already done, but it&apos;s constrained to temperature, mainly 
+                classifying them into tropical diseases or winter diseases. Solar activity is just an umbrella term that englobes solar irradiation, the magnetic 
+                field, and other phenomena that result from solar wind.  Pathogens with solar rhythmicity could also be classified as circadian viruses as the 
+                synchronization of the circadian rhythm is heavily influenced by solar activity. Due to its rhythmicity, it&apos;s likely that infections with circadian 
+                viruses resulted in the disruption of mechanisms involved in the synchronization of the circadian rhythm. Most likely the end result will be 
+                accelerated aging, disruption of the sleep-wake cycle, and increased sensitivity to solar activity. The overall components needed to synchronize 
+                the circadian rhythm are there, but the timing at which those components are needed is incorrect.  
+            </p>
 
             <p className = "text-2xl font-bold">
                 Why the name? 

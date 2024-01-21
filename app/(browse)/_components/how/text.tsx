@@ -15,9 +15,9 @@ export const TextComponent = () => {
             </p>
 
             <p className="text-xl">
-                Susceptibility forecasting is obtained by the combination of two machine learning models. The first one forecasts viral composition from 
-                time and solar features. The second model forecasts viral susceptibility by using a combination of time and solar features as well as viral 
-                composition.
+                The susceptibility forecast is the result of three deep-learning networks. One is a fragment of the VAE network, this network transforms a low-dimensional 
+                representation of the genome to the full genome composition. The second network transforms a series of environmental and time features into the low 
+                representation network. The third network transforms genomic composition and environmental data into a susceptibility approximation. 
             </p>
 
             <p className="text-xl">    
@@ -37,7 +37,7 @@ export const TextComponent = () => {
                 how the model was declared and trained can be found here. 
             </p>
 
-            <Link href="https://github.com/TavoGLC/datasets/blob/d8ba7562eb02ad65cd789d68378bf5538fa93e67/deceasesmx.py"  target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/TavoGLC/tlahui-model"  target="_blank" rel="noopener noreferrer">
                     <Button >
                         < ExternalLink />
                     </Button>
@@ -165,7 +165,7 @@ export const TextComponent = () => {
 
             <p className="text-xl">
                 If you know about some other sources of data or want to provide some feedback regarding any of the contents inside the app. Please leave them 
-                in the following poll. 
+                in the following survey. 
             </p>
 
             <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe04CB7WuBWVRzZonBlR54-ofxd9MLaA56xHnpDqyjzC9VK0Q/viewform?usp=sf_link"  target="_blank" rel="noopener noreferrer">
