@@ -18,8 +18,19 @@ export const metadata: Metadata = {
         width: 640,
         height: 427,
       }]
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SARS-Cov-2 Forecasting ',
+    description: 'SARS-Cov-2 Forecasting with machine learning',
+    images: [{
+      url: 'https://tlahui.vercel.app/social-media-image.jpg', // Must be an absolute URL
+      width: 640,
+      height: 427,
+    }]
+  },
 }
+
 
 export default function RootLayout({
   children,
